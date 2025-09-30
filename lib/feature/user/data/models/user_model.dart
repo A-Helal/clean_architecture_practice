@@ -41,8 +41,8 @@ class UserModel extends UserEntity {
       ApiKey.name: name,
       ApiKey.phone: phone,
       ApiKey.email: email,
-      ApiKey.company: company,
-      ApiKey.address: address,
+      ApiKey.company: company.toJson(),
+      ApiKey.address: (address as AddressModel).toJson(),
     };
   }
 }

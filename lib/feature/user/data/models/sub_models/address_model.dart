@@ -21,13 +21,13 @@ class AddressModel extends AddressEntity {
     );
   }
 
-  Map<String, dynamic> toJJson() {
+  Map<String, dynamic> toJson() {
     return {
       ApiKey.street: street,
       ApiKey.suite: suite,
       ApiKey.city: city,
       ApiKey.zipcode: zipcode,
-      ApiKey.geo: geo,
+      ApiKey.geo: (geo as GeoModel).toJson(),
     };
   }
 }
